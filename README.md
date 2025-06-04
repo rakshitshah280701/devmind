@@ -1,3 +1,6 @@
+<p align="center">
+<img width="409" alt="Screenshot 2025-06-04 at 12 26 16 AM" src="https://github.com/user-attachments/assets/5baacc56-c184-4077-baa6-eb204090ba14" />
+</p>
 
 # 🧠 DevMind — Developer Assistant with Claude + MCP
 
@@ -21,6 +24,46 @@ Searches your **Desktop**, **Documents**, and **Downloads** folders to locate a 
 
 ---
 
+### ✍️ `edit_file`
+Edit any file using the following modes:
+- `append` – Add content to the end
+- `replace_all` – Overwrite entire file
+- `replace_line` – Replace a specific line
+
+> _"Add ‘Rakshit Shah’ at the end of `hello.txt`."_  
+> _"Replace line 3 in `config.yaml`."_
+
+---
+
+### ❌ `delete_file`
+Delete a specific file by path.
+
+> _"Delete `notes.txt` from the Desktop."_  
+
+---
+
+### 🚚 `move_file`
+Move a file from one location to another.
+
+> _"Move `test.py` to the Documents folder."_
+
+---
+
+### 📝 `rename_file`
+Rename a file to a new name or path.
+
+> _"Rename `draft.txt` to `final.txt`."_  
+> _"Rename `example.txt` to `notes/archived.txt`."_
+
+---
+
+### 📄 `summarize_file`
+Reads the **entire** file content and sends it to Claude for summarization (no truncation).
+
+> _"Summarize the file `strategy.md`."_  
+
+---
+
 ## 🛠 How to Use
 
 ### 1. Clone the repository
@@ -28,7 +71,7 @@ Searches your **Desktop**, **Documents**, and **Downloads** folders to locate a 
 ```bash
 git clone https://github.com/yourusername/devmind.git
 cd devmind
-````
+```
 
 ### 2. Set up the virtual environment (Python 3.11.x recommended)
 
@@ -103,10 +146,11 @@ Make sure Claude has:
 ## 🚀 Roadmap
 
 * [x] File creation via LLM
-* [x] File search in common directories
-* [ ] File delete, rename, and move tools
+* [x] File and Folder search in common directories
+* [x] File delete, rename, and move tools
+* [x] Summarize or extract from existing files
 * [ ] Create full folder/project templates via prompts
-* [ ] Summarize or extract from existing files
+
 
 ---
 
