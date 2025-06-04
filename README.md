@@ -1,8 +1,4 @@
-Here’s the full `README.md` content in clean, copy-pastable Markdown format — updated with the **`uv run mcp install file_tools.py`** step clearly explained:
 
----
-
-````markdown
 # 🧠 DevMind — Developer Assistant with Claude + MCP
 
 DevMind is a local-first developer productivity agent powered by [Claude Desktop](https://www.anthropic.com/index/claude-desktop) and the Model Context Protocol (MCP). It lets you **create**, **locate**, and soon **edit or delete files** using natural language — like a coding co-pilot that understands your desktop.
@@ -48,7 +44,7 @@ pip install uv
 uv pip install "mcp[cli]"
 ```
 
-### 4. Register tools with Claude via MCP
+### 4. Register tools with Claude Desktop via MCP
 
 Install your tool into Claude by running:
 
@@ -64,21 +60,30 @@ INFO     Added server 'file_tools' to Claude config
 
 ---
 
-## 🧠 Connect to Claude Desktop
+## 🧠 Cross check tools connecticity to Claude Desktop
 
 1. Open Claude Desktop.
 2. Go to `Settings → Developer`.
-3. Add a new tool:
+3. click on “Edit Config” and it should look something like this:
+   
 
-   * **Command**: path to `uv` (typically `/Users/yourname/.venv/bin/uv`)
-   * **Arguments**:
-
-     ```bash
-     run --with mcp[cli] mcp run /full/path/to/file_tools.py
-     ```
-4. Save the tool.
-
-Claude should show a **green dot (🟢)** for “Connected.”
+```bash
+ {
+  "mcpServers": {
+    "devmind": {
+      "command": "{relativepath}/devmind/.venv/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "{relativepath}/devmind/file_tools.py"
+      ]
+    }
+  }
+}
+```
 
 > You can now say:
 > “Create a Python file in my DevMind folder and write a basic FastAPI app.”
@@ -128,9 +133,3 @@ Projects like [Cursor](https://cursor.sh/), [OpenDevin](https://github.com/OpenD
 
 MIT
 
-```
-
----
-
-You’re good to go — paste this straight into `README.md`. Let me know when you're ready for the next tool, or want to test commands in Claude.
-```
