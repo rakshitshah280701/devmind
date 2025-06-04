@@ -107,7 +107,6 @@ Make sure Claude has:
 * [ ] File delete, rename, and move tools
 * [ ] Create full folder/project templates via prompts
 * [ ] Summarize or extract from existing files
-* [ ] Add fuzzy filename search (`notes.txt` ≈ `my_notes_backup.txt`)
 
 ---
 
@@ -128,8 +127,4 @@ devmind/
 Projects like [Cursor](https://cursor.sh/), [OpenDevin](https://github.com/OpenDevin/OpenDevin), and the magic of local-first agents like Claude with MCP.
 
 ---
-
-## 📝 License
-
-MIT
 
