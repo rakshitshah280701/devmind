@@ -2,9 +2,13 @@
 <img width="409" alt="Screenshot 2025-06-04 at 12 26 16 AM" src="https://github.com/user-attachments/assets/5baacc56-c184-4077-baa6-eb204090ba14" />
 </p>
 
+<p align="center">
+<img width="409" alt="DevMind Logo" src="https://github.com/user-attachments/assets/5baacc56-c184-4077-baa6-eb204090ba14" />
+</p>
+
 # 🧠 DevMind — Developer Assistant with Claude + MCP
 
-DevMind is a local-first developer productivity agent powered by [Claude Desktop](https://www.anthropic.com/index/claude-desktop) and the Model Context Protocol (MCP). It lets you **create**, **locate**, and soon **edit or delete files** using natural language — like a coding co-pilot that understands your desktop.
+DevMind is a local-first developer productivity agent powered by [Claude Desktop](https://www.anthropic.com/index/claude-desktop) and the Model Context Protocol (MCP). It lets you **create**, **navigate**, **analyze**, and **interact with projects** entirely using natural language — like a coding co-pilot that deeply understands your files and codebase.
 
 ---
 
@@ -13,54 +17,70 @@ DevMind is a local-first developer productivity agent powered by [Claude Desktop
 ### ✅ `create_file`
 Create a file at a specific location with any content you want.
 
-> Example:  
-> “Create a file named `hello.txt` with content `Hello World!` in the DevMind folder on Desktop.”
+> _“Create a file named `hello.txt` with content `Hello World!` in the DevMind folder on Desktop.”_
+
+---
 
 ### 🔍 `find_file`
-Searches your **Desktop**, **Documents**, and **Downloads** folders to locate a file by name.
+Recursively search from any directory and locate files or folders.
 
-> Example:  
-> “Where is `notes.txt`?”
+> _“Where is `notes.txt` inside my Desktop?”_
 
 ---
 
 ### ✍️ `edit_file`
-Edit any file using the following modes:
-- `append` – Add content to the end
-- `replace_all` – Overwrite entire file
-- `replace_line` – Replace a specific line
-
-> _"Add ‘Rakshit Shah’ at the end of `hello.txt`."_  
-> _"Replace line 3 in `config.yaml`."_
+Edit any file using:
+- `append` – Add content at the end
+- `replace_all` – Overwrite the full file
+- `replace_line` – Replace a specific line number
 
 ---
 
 ### ❌ `delete_file`
-Delete a specific file by path.
-
-> _"Delete `notes.txt` from the Desktop."_  
+Delete any file by its path.
 
 ---
 
 ### 🚚 `move_file`
-Move a file from one location to another.
-
-> _"Move `test.py` to the Documents folder."_
+Move a file to another folder.
 
 ---
 
 ### 📝 `rename_file`
-Rename a file to a new name or path.
-
-> _"Rename `draft.txt` to `final.txt`."_  
-> _"Rename `example.txt` to `notes/archived.txt`."_
+Rename a file or move+rename in one go.
 
 ---
 
 ### 📄 `summarize_file`
-Reads the **entire** file content and sends it to Claude for summarization (no truncation).
+Returns the full file content for Claude to summarize.
 
-> _"Summarize the file `strategy.md`."_  
+---
+
+### 📁 `list_subdirectories`
+List all immediate subdirectories inside a given folder.
+
+> _“List all projects inside `~/Desktop/Github_projects`”_
+
+---
+
+### 🧠 `analyze_project_structure`
+Scans every file in your codebase, summarizes each one, detects imports, and builds a memory index of all files.
+
+> Use this once to let Claude “understand” your project structure.
+
+---
+
+### 🔍 `get_file_summary`
+Return the summary and imports of any file previously analyzed.
+
+> _“What does `routes/auth.py` do?”_
+
+---
+
+### 📂 `get_file_content`
+Return the **full source code** of any file Claude previously indexed.
+
+> _“Show me full content of `models/user.py`”_
 
 ---
 
@@ -146,10 +166,12 @@ Make sure Claude has:
 ## 🚀 Roadmap
 
 * [x] File creation via LLM
-* [x] File and Folder search in common directories
-* [x] File delete, rename, and move tools
-* [x] Summarize or extract from existing files
-* [ ] Create full folder/project templates via prompts
+* [x] File and Folder search across system
+* [x] Create, edit, move, rename and delete files 
+* [x] Summarize any file
+* [x] Project summarization and indexing
+* [x] Per-file summary and full-content tools
+* [x] Directory exploration (list_subdirectories)
 
 
 ---
