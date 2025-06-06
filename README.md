@@ -1,6 +1,3 @@
-<p align="center">
-<img width="409" alt="Screenshot 2025-06-04 at 12 26 16 AM" src="https://github.com/user-attachments/assets/5baacc56-c184-4077-baa6-eb204090ba14" />
-</p>
 
 <p align="center">
 <img width="409" alt="DevMind Logo" src="https://github.com/user-attachments/assets/5baacc56-c184-4077-baa6-eb204090ba14" />
